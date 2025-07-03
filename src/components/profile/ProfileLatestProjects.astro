@@ -1,5 +1,6 @@
 ---
 import GenericCard from "../ui/GenericCard.astro";
+import { formatDate } from "../../utils/formatDate.ts";
 
 // Import the icons as Astro components.
 // Note the capitalized names (e.g., CakeIcon), which is a convention for components.
@@ -51,7 +52,7 @@ const LatestProjectData = [
           >
             <div class="flex justify-between">
               <span class="text-lg text-stone-50 font-bold">{key.title}</span>
-              <span class="text-md text-stone-400">{key.date}</span>
+              <span class="text-md text-stone-400">{formatDate(key.date)}</span>
             </div>
             <div class="">
               <span class="text-base text-stone-300 font-light">

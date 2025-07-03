@@ -5,27 +5,45 @@ import GenericCard from "../ui/GenericCard.astro";
 // Note the capitalized names (e.g., CakeIcon), which is a convention for components.
 import GithubIcon from "../../assets/icons/github-142-svgrepo-com.svg";
 import LinkedinIcon from "../../assets/icons/linkedin-logo-thin-svgrepo-com.svg";
+
+type socialItem = {
+  url: string,
+  ariaLabel: string,
+  name: string,
+  iconComponent: any
+}
+
+const socialItemsArray: socialItem[] = [
+  {
+    url: "https://github.com/Warchafter",
+    ariaLabel: "Github Icon",
+    name: "Github",
+    iconComponent: GithubIcon
+  },
+  {
+    url: "https://www.linkedin.com/in/kevin-arriaga-solis/",
+    ariaLabel: "GLinkedIn icon",
+    name: "LinkedIn",
+    iconComponent: LinkedinIcon
+  }
+];
+
 ---
 
 <GenericCard>
   <h3 class="text-2xl">Socials</h3>
   <ul class="text-l">
-    <li class="flex items-center gap-4 mb-2">
-      <!-- Render the icon as a component, not an img tag -->
-      <GithubIcon aria-label="Github icon" class="w-7 h-7 text-purple-500" /><a
-        class="hover:text-purple-500"
-        href="https://github.com/Warchafter">Github</a
-      >
-    </li>
-    <li class="flex items-center gap-4 mb-2">
-      <!-- Render the icon as a component, not an img tag -->
-      <LinkedinIcon
-        aria-label="LinkedIn icon"
-        class="w-7 h-7 text-purple-500"
-      /><a
-        href="https://www.linkedin.com/in/kevin-arriaga-solis/"
-        class="hover:text-purple-500">LinkedIn</a
-      >
-    </li>
+    {
+      socialItemsArray.map((item) => {
+        const Icon = item.iconComponent;
+        return (
+          <li class="flex items-center gap-4 mb-2">
+            <Icon aria-label={item.ariaLabel} class="w-7 h-7 text-purple-500" />
+            <a class="hover:text-purple-500"
+            href={item.url}>{item.name}</a>
+          </li>
+        );
+      })
+    }
   </ul>
 </GenericCard>
