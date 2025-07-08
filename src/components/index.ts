@@ -6,7 +6,7 @@ export { default as Welcome } from './Welcome.astro';
 export { default as QuoteCard } from './QuoteCard.tsx';
 
 // UI primitives
-export { default as GenericCard } from './ui/GenericCard.astro';
+export { default as GenericCard } from './ui/GenericCard.tsx';
 
 // Profile section
 export { default as ProfileAboutMe } from './profile/ProfileAboutMe.astro';
