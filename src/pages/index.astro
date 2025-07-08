@@ -1,13 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-import Navbar from "../components/Navbar.astro";
-import ProfileStatsCard from "../components/profile/ProfileStatsCard.astro";
-import ProfileSocials from "../components/profile/ProfileSocials.astro";
-import ProfileStatus from "../components/profile/ProfileStatus.astro";
-import ProfileAboutMe from "../components/profile/ProfileAboutMe.astro";
-import ProfileLatestProjects from "../components/profile/ProfileLatestProjects.astro";
-import ProfileWorkExperience from "../components/profile/ProfileWorkExperience.astro";
+
+import {
+  Navbar,
+  ProfileStatsCard,
+  ProfileSocials,
+  ProfileStatus,
+  ProfileAboutMe,
+  ProfileLatestProjects,
+  ProfileWorkExperience,
+  QuoteCard
+} from '~/components';
+
 ---
 
 <Layout>
@@ -20,6 +25,7 @@ import ProfileWorkExperience from "../components/profile/ProfileWorkExperience.a
         <ProfileStatsCard />
         <ProfileSocials />
         <ProfileStatus />
+        <QuoteCard />
       </div>
       <div class="grid col-span-5 col-start-3 gap-8">
         <ProfileAboutMe />

@@ -2,6 +2,8 @@
 
 A modern, elegant personal portfolio and blog website for Kevin Arriaga, built with **Astro 5** and styled with **TailwindCSS**. The site features a beautiful violet/purple color scheme and showcases professional experience, projects, and personal insights.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c7791d3a-dc2c-4bbf-bb68-de473be16cd8/deploy-status)](https://app.netlify.com/projects/violetly/deploys)
+
 ## ✨ Features
 
 - **🎨 Violet Theme**: Beautiful purple color scheme throughout
