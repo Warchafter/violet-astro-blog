@@ -1,12 +1,9 @@
-import { type QuoteResponse, QuoteResponseSchema } from "./types";
-
-// type QuoteType = number | "random" | "quote-of-the-day";
-type QuoteType =
-    | { type: "random" }
-    | { type: "quote-of-the-day" }
-    | { id: number };
-
-type APIResult<T> = { success: true; data: T } | { success: false; error: string };
+import {
+    type QuoteResponse,
+    QuoteResponseSchema,
+    type QuoteType,
+    type APIResult
+} from "./types";
 
 export default async function getQuote(quoteInput: QuoteType): Promise<APIResult<QuoteResponse>> {
     const baseAPIUrl = "https://www.quoterism.com/api/quotes/";

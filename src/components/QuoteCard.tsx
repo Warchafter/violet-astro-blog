@@ -1,5 +1,13 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import GenericCard from "./ui/GenericCard";
 
 export default function QuoteCard() {
-    return <p className="text-green-500">Hello from react!</p>;
+
+    
+    return (
+        <GenericCard>
+
+            <p className="text-green-500">Hello from react!</p>
+        </GenericCard>
+    );
 }
